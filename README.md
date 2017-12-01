@@ -6,6 +6,5 @@ price of the order! All of this is done using an elegant and simple user interfa
 
 ![screenshot app](doc/Screenshot_20171201-123938.png)
 ![screenshot app](doc/Screenshot_20171201-123944.png)
-![screenshot app](doc/Screenshot_20171201-123949.png)
 ![screenshot app](doc/Screenshot_20171201-124003.png)
 ![screenshot app](doc/Screenshot_20171201-124007.png)
