@@ -10,6 +10,10 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Attach the Fragment to the activity.
+    // Use a fragment manager, which allows adding and replacing fragments,
+    // while keeping track of all fragments using tags.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

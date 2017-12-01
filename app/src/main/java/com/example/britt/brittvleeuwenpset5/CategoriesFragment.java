@@ -36,6 +36,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
+// Fragment class with a constructor and onCreateView(), and also a layout XML file associated with the fragment.
 public class CategoriesFragment extends ListFragment {
 
     List<String> myArray = new ArrayList<String>();
@@ -46,6 +47,7 @@ public class CategoriesFragment extends ListFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Make adapter to get category chosen.
         adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, myArray);
         this.setListAdapter(adapter);
 
@@ -93,9 +95,9 @@ public class CategoriesFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-
         MenuFragment menuFragment = new MenuFragment();
 
+        // Pass on the category that was clicked by adding it to a Bundle, and setting this bundle as the arguments of MenuFragment
         Bundle args = new Bundle();
         args.putString("category", l.getItemAtPosition(position).toString());
         menuFragment.setArguments(args);

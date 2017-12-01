@@ -149,6 +149,10 @@ public class OrderFragment extends DialogFragment implements View.OnClickListene
         Cursor c = restoDatabase.selectAll();
         restoAdapter = new RestoAdapter(getActivity(), c);
         list.setAdapter(restoAdapter);
+
+        String pricetotal = restoDatabase.totalPrice();
+        total.setText(pricetotal);
+
         return true;
     }
 }

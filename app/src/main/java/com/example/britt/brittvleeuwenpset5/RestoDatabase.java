@@ -29,9 +29,6 @@ import javax.xml.transform.Result;
  * Created by britt on 27-11-2017.
  */
 
-//We’d like to have an addItem() method that adds one dish to the order (saving name, price etc.). But if the dish is already in the order, it just has to increment the amount already in the database.
-        //We’d like to have a clear() method that removes all order items from the database.
-
 public class RestoDatabase extends SQLiteOpenHelper {
     private static String TABLE_NAME = "orders";
     private static RestoDatabase instance;
@@ -65,7 +62,7 @@ public class RestoDatabase extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
 
         Cursor c = sqLiteDatabase.rawQuery("Select * from " + TABLE_NAME + " where name = '"+ name + "';", null);
-        
+
         if (c.getCount() > 0) {
             String create = "Update " + TABLE_NAME + " Set amount = amount+1 where name='" + name + "';";
             sqLiteDatabase.execSQL(create);
